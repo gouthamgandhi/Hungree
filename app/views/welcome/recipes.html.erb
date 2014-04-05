@@ -1,0 +1,15 @@
+<h1 class="page-header">Listing Receipes</h1>
+<% @apicalls.each do |apicall| %>
+<table class="table table-condensed table-bordered">
+	<thead>
+		<th>ID</th>
+		<th>Ingredients</th>
+		<th>Description</th>
+	</thead>
+	<tbody>
+		<td><%= apicall.id %></td>
+		<td><%= apicall.ingredients %></td>
+		<td><%= apicall.description %></td>
+	</tbody>	
+</table>
+<% end %>

@@ -1,0 +1,106 @@
+<!-- Register with background-->
+<style>
+	#email{
+		width: 500px;
+		height: 50px;
+	}
+	#mainbutton{
+		height: 50px;
+		color: white;
+	}
+	.campaign{
+	}
+	.thumbnail{
+		min-height: 325px;
+	}
+
+</style>
+<div class="jumbotron">
+  <h1>Hungree</h1>
+  <p>An intelligent grocery list from your healthy meal plan</p>
+  <p class="col-lg-8 campaign">
+  	<%= form_tag campaign_path, method: "post" , class: "input-group" do %>
+  		<%=  text_field_tag :email, nil, placeholder: "awesome@hungree.com" , class: "form-control col-lg-8", id: 'email' %>
+  		<%= submit_tag "I want this!!", class: "input-group-addon btn btn-primary col-lg-1" , id: 'mainbutton'%>
+	<% end %>
+  </p>
+</div>
+<!-- How it works ?-->
+
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail text-center">
+      <h3>Step 1</h3>
+      <img src="<%= asset_path 'budget.jpg' %>" >
+      <div class="caption">  
+        <p>...</p>
+        <br>
+        <p class="text-right"><a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail text-center">
+      <h3>Step 2</h3>
+      <img src="<%= asset_path 'HowmanyEating.jpg' %>" >
+      <div class="caption">
+        <p>...</p>
+        <br>
+        <p class="text-right"><a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail text-center">
+      <h3>Step 3</h3>
+      <img src="<%= asset_path 'Selectfood.jpg' %>">
+      <div class="caption">
+        <p>...</p>
+         <br>
+       <p class="text-right"> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail text-center">
+      <h3>Step 4</h3>
+      <img src="<%= asset_path 'grocerylist.jpg' %>" >
+      <div class="caption">
+        <p>...</p>
+          <br>
+      <p class="text-right"> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- Explanation -->
+<div class="panel panel-default">
+  <div class="panel-heading">Pick a Budget: </div>
+  <div class="panel-body">
+    Setting up budget and alergies comes here !
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Select Meals :</div>
+  <div class="panel-body">
+    Picking meals comes here
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Confirm Meal plan: </div>
+  <div class="panel-body">
+    Confirmed meal plan comes here
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Your grocery list:</div>
+  <div class="panel-body">
+    Grocery list comes here
+  </div>
+</div>
