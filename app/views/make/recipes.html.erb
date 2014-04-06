@@ -1,0 +1,7 @@
+<%= render 'layouts/navbar' %>
+<h1>Receipes</h1>
+<% @recipes.each do |recipe| %>
+<div class="alert">
+	<%= recipe.details_dump %>
+</div>
+<% end %>

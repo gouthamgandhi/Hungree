@@ -2,7 +2,7 @@ require 'json'
 require 'yummly'
 class WelcomeController < ApplicationController
   def index
-  	@apicalls = Yummly.search('Main Dish',{ maxResult: 2000 })
+  	#@apicalls = Yummly.search('Main Dish',{ maxResult: 2000 })
   end
 
   # => Collect emails from landing page.
@@ -19,6 +19,6 @@ class WelcomeController < ApplicationController
 
   def recipes
   	@apicalls = Yummly.search('Main Dish',{ maxResult: 10 })
-  	
+
   end
 end

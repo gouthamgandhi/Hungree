@@ -1,4 +1,9 @@
 Hungree::Application.routes.draw do
+  get "recipes/index"
+  get "recipes/new"
+  get "recipes/edit"
+  get "recipes/create"
+  get "recipes/delete"
   get "make/budget"
   get "make/receipes"
   get "make/groceries"
@@ -9,7 +14,7 @@ Hungree::Application.routes.draw do
 
   match 'recipes' => "welcome#recipes", via: :get
 
-  match 'getrecipes' => "make#recipes", via: :post
+  match 'getrecipes' => "make#recipes", via: :get
 
   match 'campaign' => 'welcome#collect_email', via: :post
   # The priority is based upon order of creation: first created -> highest priority.

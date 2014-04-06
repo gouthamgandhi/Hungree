@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cost: 1.5
+  diet: MyString
+  details_dump: 
+  scrap_dump: 
+
+two:
+  name: MyString
+  cost: 1.5
+  diet: MyString
+  details_dump: 
+  scrap_dump: 
