@@ -17,4 +17,8 @@ class WelcomeController < ApplicationController
     end
   end
 
+  def recipes
+  	@apicalls = Yummly.search('Main Dish',{ maxResult: 10 })
+  	
+  end
 end

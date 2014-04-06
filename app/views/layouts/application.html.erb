@@ -9,8 +9,7 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body class="container">
-<% render 'layouts/navbar' %>
+<body class="container-fluid">
 <% if notice %>
 	<div class="alert alert-success text-center"><%= notice %></div>
 <% end %>
@@ -18,6 +17,6 @@
 	<div class="alert alert-warning text-center"><%= alert %></div>	
 <% end %>
 <%= yield %>
-
+<%= render 'layouts/footer' %>
 </body>
 </html>

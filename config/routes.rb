@@ -1,7 +1,15 @@
 Hungree::Application.routes.draw do
+  get "make/budget"
+  get "make/receipes"
+  get "make/groceries"
   devise_for :users
   get "welcome/index"
+
   root 'welcome#index'
+
+  match 'recipes' => "welcome#recipes", via: :get
+
+  match 'getrecipes' => "make#recipes", via: :post
 
   match 'campaign' => 'welcome#collect_email', via: :post
   # The priority is based upon order of creation: first created -> highest priority.

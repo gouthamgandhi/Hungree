@@ -2,13 +2,17 @@
 <% @apicalls.each do |apicall| %>
 <table class="table table-condensed table-bordered">
 	<thead>
-		<th>ID</th>
+		<th>Name</th>
 		<th>Ingredients</th>
+		<th>CookingTime</th>
+		<th>Rating</th>
 		<th>Description</th>
 	</thead>
 	<tbody>
-		<td><%= apicall.id %></td>
-		<td><%= apicall.ingredients %></td>
+		<td><%= apicall.recipe_name %></td>
+		<td><%= apicall.ingredients.join(",") %></td>
+		<td><%= apicall.total_time %></td>
+		<td><%= apicall.rating %></td>
 		<td><%= apicall.description %></td>
 	</tbody>	
 </table>

@@ -1,0 +1,27 @@
+<%= render 'layouts/navbar' %>
+
+<style>
+	input{
+		height: 35px
+	}
+</style>
+
+<%= form_tag getrecipes_path, method: 'post',class: "form-inline well" do %>
+  <div class="form-group co-lg-3">
+  	<label for="price_per_meal" class="col-lg-9">
+		How much do you want to spend per meal : ($)
+	</label>
+	<%=  text_field_tag :price_per_meal, nil, placeholder: "10" , class: "col-lg-2", id: 'price_per_meal' %>
+  </div>
+  <div class="form-group co-lg-3">
+    <label class="col-lg-8" for="no_of_meals">Number of Meals : </label>
+    <%=  text_field_tag :number_of_meals, nil, placeholder: "2" , class: "col-lg-2", id: 'number_of_meals' %>
+  </div>
+  <div class="form-group co-lg-3">
+    <label for="restrictions" class="col-lg-7">
+       Dietary Restrictions  :
+    </label>
+    <%=  select_tag "count", "<option>Vegetarian</option><option>Pescitarian</option><option>Non-Vegetatian</option><option>Paleolithic</option><option>Vegan</option><option>Gluten-Free</option><option>Lactose-Free</option>".html_safe , class: "col-lg-4" %>
+  </div>
+  <%= submit_tag "Get Recipes", class: "input-group btn btn-primary co-lg-3" , id: 'mainbutton'%>
+<% end %>

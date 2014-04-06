@@ -13,9 +13,17 @@
 	.thumbnail{
 		min-height: 325px;
 	}
-
+	
+	.jumbotron{
+		background-image: url(<%= asset_path 'main.jpg' %>);
+		color: white;
+		background-size: 100%;
+		height: 500px;
+		width:100%;
+	}
 </style>
-<div class="jumbotron">
+	
+<div class="jumbotron" >
   <h1>Hungree</h1>
   <p>An intelligent grocery list from your healthy meal plan</p>
   <p class="col-lg-8 campaign">
@@ -26,7 +34,7 @@
   </p>
 </div>
 <!-- How it works ?-->
-
+<div class="container">
 <div class="row">
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail text-center">
@@ -103,4 +111,5 @@
   <div class="panel-body">
     Grocery list comes here
   </div>
+</div>
 </div>
