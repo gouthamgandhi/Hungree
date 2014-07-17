@@ -25,3 +25,21 @@
   </div>
   <%= submit_tag "Get Recipes", class: "input-group btn btn-primary co-lg-3" , id: 'mainbutton'%>
 <% end %>
+
+<h1 class="page-header">Listing Receipes</h1>
+
+<% @recipes.each do |recipe| %>
+<div class="container-fluid">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="<%= recipe.details_dump %>" >
+      <div class="caption">
+        <h3><%= recipe.recipe_name %>
+        <span> <%= recipe.cost %> </span>
+        </h3>
+        <p><%= recipe.ingredients.to_s %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

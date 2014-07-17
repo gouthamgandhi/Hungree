@@ -1,15 +1,17 @@
 <!-- Register with background-->
 <style>
+	body{
+		font-family: "Comic Sans MS"
+	}
 	#email{
-		width: 500px;
+		width: 60em;
 		height: 50px;
 	}
 	#mainbutton{
 		height: 50px;
 		color: white;
 	}
-	.campaign{
-	}
+
 	.thumbnail{
 		min-height: 325px;
 	}
@@ -21,17 +23,32 @@
 		height: 500px;
 		width:100%;
 	}
+	.container-fluid{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	#mainbrand{
+		color:rgb(246, 173, 16);
+		font-size: 10em;
+		margin-top:50px;
+		 text-shadow: 2px 2px 2px #000, 3px 3px 5px rgb(2, 2, 19);
+	}
+	#tagline{
+		color:rgb(246, 173, 16);
+		font-size: 3em;
+		text-shadow: 2px 2px rgb(2, 2, 19);
+	}
+
 </style>
 	
-<div class="jumbotron" >
-  <h1>Hungree</h1>
-  <p>An intelligent grocery list from your healthy meal plan</p>
-  <p class="col-lg-8 campaign">
-  	<%= form_tag campaign_path, method: "post" , class: "input-group" do %>
-  		<%=  text_field_tag :email, nil, placeholder: "awesome@hungree.com" , class: "form-control col-lg-8", id: 'email' %>
-  		<%= submit_tag "I want this!!", class: "input-group-addon btn btn-primary col-lg-1" , id: 'mainbutton'%>
+<div class="jumbotron container">
+  <h1 class="col-md-10 col-md-offset-2" style="" id="mainbrand">Hungree</h1>
+  <p class="col-md-8 col-md-offset-2" id="tagline">An intelligent grocery list from your healthy meal plan in your budget.</p>
+  
+  	<%= form_tag campaign_path, method: "post" , class: "col-md-10 col-md-offset-2 campaign-form input-group " do %>
+  		<%=  text_field_tag :email, nil, placeholder: "awesome@hungree.com" , class: "campaign-form form-control", id: 'email' %>
+  		<%= submit_tag "  I want this !!!  ", class: "input-group-addon btn btn-primary btn-group-lg" , id: 'mainbutton'%>
 	<% end %>
-  </p>
 </div>
 <!-- How it works ?-->
 <div class="container">
@@ -39,22 +56,22 @@
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail text-center">
       <h3>Step 1</h3>
+      <br>
       <img src="<%= asset_path 'budget.jpg' %>" >
+      <br>
       <div class="caption">  
-        <p>...</p>
-        <br>
-        <p class="text-right"><a href="#" class="btn btn-default" role="button">Button</a></p>
+        <h3> Pick a Budget</h3>
       </div>
     </div>
   </div>
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail text-center">
       <h3>Step 2</h3>
+      <br>
       <img src="<%= asset_path 'HowmanyEating.jpg' %>" >
+      <br>
       <div class="caption">
-        <p>...</p>
-        <br>
-        <p class="text-right"><a href="#" class="btn btn-default" role="button">Button</a></p>
+        <h3> Size of your family</h3>
       </div>
     </div>
   </div>
@@ -62,11 +79,11 @@
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail text-center">
       <h3>Step 3</h3>
+      <br>
       <img src="<%= asset_path 'Selectfood.jpg' %>">
+      <br>
       <div class="caption">
-        <p>...</p>
-         <br>
-       <p class="text-right"> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <h3> Pick your meals </h3>
       </div>
     </div>
   </div>
@@ -74,11 +91,11 @@
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail text-center">
       <h3>Step 4</h3>
+      <br>
       <img src="<%= asset_path 'grocerylist.jpg' %>" >
+      <br>
       <div class="caption">
-        <p>...</p>
-          <br>
-      <p class="text-right"> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <h3> Grocery list</h3>
       </div>
     </div>
   </div>
